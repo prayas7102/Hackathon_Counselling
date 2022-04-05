@@ -1,5 +1,3 @@
-import Sidebar from "./components/sidebar/Sidebar";
-import Topbar from "./components/topbar/Topbar";
 import "./App.css";
 import Home from "./pages/home/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -9,13 +7,12 @@ import NewUser from "./pages/newUser/NewUser";
 import ProductList from "./pages/productList/ProductList";
 import Product from "./pages/product/Product";
 import NewProduct from "./pages/newProduct/NewProduct";
+import QuestionForm from "./pages/QuestionForm/QuestionForm";
 
 function App() {
   return (
     <div className="container">
-      <Topbar />
         <Router>
-        <Sidebar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/users" element={<UserList />}/>
@@ -25,6 +22,7 @@ function App() {
           <Route path="/product/:productId" element={<Product />} />
           <Route path="/newUser" element={<NewUser />} />
           <Route path="/newproduct" element={ <NewProduct />}/>
+          <Route path="/question_form" element={ <QuestionForm />}/>
           </Routes>
           </Router>
       </div>

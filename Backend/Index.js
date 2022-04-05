@@ -30,9 +30,8 @@ app.get('/get_all_files', (req, res) => {
     let directorypath=path.join(__dirname,'/files');
     fs.readdir(directorypath, (err,files)=>{
         if(err) throw err;
-        let ques_data=JSON.parse(data);
         res.send(files);
-    })
+    });
 })
 
 app.listen(9000,()=>{console.log('server running at 9000')})
